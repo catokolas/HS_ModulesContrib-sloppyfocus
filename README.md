@@ -82,5 +82,6 @@ Gives keyboard focus to `win` without changing its position in the Z-order.
 
 ## License
 
-MIT — see [`LICENSE`](../LICENSE) at the repo root. Compatible with the
-upstream projects this module derives from (AutoRaise and yabai are both MIT).
+MIT — see [`LICENSE`](LICENSE) (sibling file at the repo root). Compatible
+with the upstream projects this module derives from (AutoRaise and yabai are
+both MIT).
