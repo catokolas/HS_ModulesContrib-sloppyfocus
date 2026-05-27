@@ -28,9 +28,10 @@ macOS that removes them just makes us degrade to a no-op):
   [yabai](https://github.com/koekeishiya/yabai) via AutoRaise).
 - `GetProcessForPID` from ApplicationServices — to get a PSN from a pid.
 
-The full recipe is documented inline in `internal.m`; it's a verbatim port
-of `AutoRaise.mm` lines 169-221 with the gating logic stripped out (we let
-`hs.window` decide what to focus).
+The full recipe is documented inline in `internal.m`; it's a verbatim
+port of [`AutoRaise.mm` lines 165-221](https://github.com/sbmpost/AutoRaise/blob/17e0c9abe8155fd2cf2fc0486fc6e1f2caebe978/AutoRaise.mm#L165-L221)
+with the gating logic stripped out (we let `hs.window` decide what to
+focus).
 
 ## Build & install
 

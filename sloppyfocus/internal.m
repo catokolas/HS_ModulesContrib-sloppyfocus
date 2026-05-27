@@ -1,7 +1,8 @@
 // hs._ckol.sloppyfocus.internal — native bridge to SkyLight's private
 // focus-without-raise primitives. The full recipe (SLPS + yabai-style
 // make_key_window event posting + same-process deactivate/activate dance)
-// was lifted from AutoRaise.mm:169-221.
+// was lifted from AutoRaise.mm lines 165-221, permalinked at
+// https://github.com/sbmpost/AutoRaise/blob/17e0c9abe8155fd2cf2fc0486fc6e1f2caebe978/AutoRaise.mm#L165-L221
 //
 // Exposed to Lua as: _focusByPidAndWindowID(pid, wid, fpid, fwid) -> boolean
 // where fpid/fwid identify the currently-focused window (optional; 0 = none).
