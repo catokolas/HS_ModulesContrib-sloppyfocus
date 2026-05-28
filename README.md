@@ -96,6 +96,25 @@ local current = hs.window.focusedWindow()
 sloppy.focusWithoutRaise(target, current)
 ```
 
+## Logging
+
+This module emits no log output of its own and intentionally avoids
+`NSLog` in `internal.m` — focus-without-raise runs on every mouseover
+in the calling Spoon, so per-call logging would be very noisy. All
+diagnostic output is the responsibility of the calling Spoon (e.g.
+`FocusFollowsMouse.spoon` exposes a `logger` variable; see its README
+for how to set the level).
+
+For native-side debugging, build a debug copy and `printf`/`NSLog`
+ad-hoc:
+
+```bash
+cd sloppyfocus
+make clean && make DEBUG_CFLAGS="-g -O0"
+# add NSLog(@"...") calls in internal.m, rebuild, quit & relaunch HS.
+# Output lands in Console.app under the Hammerspoon process.
+```
+
 ## API
 
 ### `focusWithoutRaise(win [, currentlyFocused]) -> boolean`
