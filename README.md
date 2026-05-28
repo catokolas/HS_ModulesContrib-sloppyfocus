@@ -2,7 +2,7 @@
 
 A small Hammerspoon native module that focuses a window without raising it
 (X11-style "sloppy focus" on macOS). Designed to be called from the
-[`FocusFollowsMouse`](/catokolas/HS_SpoonsContrib/blob/main/FocusFollowsMouse.spoon) spoon's `_maybeFocus`
+[`FocusFollowsMouse`](https://github.com/catokolas/HS_SpoonsContrib/blob/main/FocusFollowsMouse.spoon) spoon's `_maybeFocus`
 hook, but usable from any Lua code that has an `hs.window`.
 
 ## Why this exists
