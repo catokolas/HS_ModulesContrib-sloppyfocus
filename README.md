@@ -77,7 +77,8 @@ To produce a release artifact (universal binary zip) yourself:
 
 ```bash
 cd sloppyfocus
-make dist VERSION=0.1     # → dist/sloppyfocus-0.1-macos-universal.zip
+VERSION=0.1
+make dist $VERSION     # → dist/sloppyfocus-0.1-macos-universal.zip
 ```
 
 If you have access — publish the artifact as a GitHub Release with the
@@ -85,9 +86,9 @@ If you have access — publish the artifact as a GitHub Release with the
 
 ```bash
 # From the repo root (the parent of the `sloppyfocus/` subdir):
-gh release create v0.1 \
-  sloppyfocus/dist/sloppyfocus-0.1-macos-universal.zip \
-  --title "v0.1" \
+gh release create v$VERSION \
+  sloppyfocus/dist/sloppyfocus-$VERSION-macos-universal.zip \
+  --title "v$VERSION" \
   --notes "Initial release. Universal arm64 + x86_64 binary built against macOS 13.0+."
 ```
 
